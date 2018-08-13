@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from '../app.component';
 import { FormOneComponent } from '../form-one/form-one.component';
 import { ReactiveFormsComponent } from '../reactive-forms/reactive-forms.component';
+import { SearchFormsComponent } from "../search-forms/search-forms.component";
 //ONly one instance of the router otherwise you will run into issues later
 const routes: Routes = [
     {
@@ -19,6 +20,10 @@ const routes: Routes = [
     {
         path:'reactiveForm',
         component: ReactiveFormsComponent
+    },
+     {
+        path:'searchForm',
+        component: SearchFormsComponent
     }
 ]
 

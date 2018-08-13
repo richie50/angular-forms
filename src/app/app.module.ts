@@ -13,12 +13,14 @@ import { FormsModule , ReactiveFormsModule}   from '@angular/forms';
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 //services
 import { FormService } from './form-service.service';
+import { SearchFormsComponent } from './search-forms/search-forms.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormOneComponent,
-    ReactiveFormsComponent
+    ReactiveFormsComponent,
+    SearchFormsComponent
   ],
   imports: [
   BrowserModule,
