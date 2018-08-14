@@ -14,13 +14,15 @@ import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.componen
 //services
 import { FormService } from './form-service.service';
 import { SearchFormsComponent } from './search-forms/search-forms.component';
+import { ModalFormComponent } from './modal-form/modal-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormOneComponent,
     ReactiveFormsComponent,
-    SearchFormsComponent
+    SearchFormsComponent,
+    ModalFormComponent
   ],
   imports: [
   BrowserModule,
