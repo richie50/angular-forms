@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { HttpClientInMemoryWebApiModule, InMemoryDbService } from 'angular-in-memory-web-api';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { FormOneComponent } from './form-one/form-one.component';
@@ -13,8 +15,14 @@ import { FormsModule , ReactiveFormsModule}   from '@angular/forms';
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 //services
 import { FormService } from './form-service.service';
+import { ValidationService } from './services/validation.services';
+//components
 import { SearchFormsComponent } from './search-forms/search-forms.component';
 import { ModalFormComponent } from './modal-form/modal-form.component';
+import { FormGroupComponent } from './form-group/form-group.component';
+import { ControlMessagesComponent } from './control-messages/control-messages.component';
+import { PatchValueComponent } from './patch-value/patch-value.component';
+import { FormDataMock } from "./services/mock-data.service";
 
 @NgModule({
   declarations: [
@@ -22,15 +30,23 @@ import { ModalFormComponent } from './modal-form/modal-form.component';
     FormOneComponent,
     ReactiveFormsComponent,
     SearchFormsComponent,
-    ModalFormComponent
+    ModalFormComponent,
+    FormGroupComponent,
+    ControlMessagesComponent,
+    PatchValueComponent
   ],
   imports: [
-  BrowserModule,
-  AppRoutingModule,
-  FormsModule,
-  ReactiveFormsModule //fixes the cant bind
+    HttpClientModule,
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule ,//fixes the cant bind
+    HttpClientInMemoryWebApiModule.forRoot(FormDataMock)
   ],
-  providers: [FormService],
+  providers: [
+    FormService,
+    ValidationService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

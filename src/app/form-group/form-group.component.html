@@ -1,0 +1,41 @@
+
+<form [formGroup]="userForm">
+  <fieldset>
+    <div class="form-group">
+      <label>First Name</label>
+      <input type="text" formControlName="fname" id="fname" 
+             class="form-control">
+      <control-messages [control]="userForm.controls.fname"></control-messages>       
+    </div>
+
+    <div class="form-group">
+      <label>Last Name</label>
+      <input type="text"  formControlName="lname" id="lname" 
+             class="form-control">
+      <control-messages [control]="userForm.controls.lname"></control-messages>       
+    </div>
+ 
+
+  <div class="form-group">
+    <label>Email</label>
+    <input type="email"  formControlName="email" id="email" 
+           class="form-control">
+    <control-messages [control]="userForm.controls.email"></control-messages>       
+  </div>
+
+  <div class="form-group">
+    <label>Password</label>
+    <input type="password"  formControlName="password" id="password" 
+           class="form-control">
+    <control-messages [control]="userForm.controls.password"></control-messages>       
+  </div>
+
+  <div class="form-group">
+    <label>Language</label>
+    <select class="form-control">
+      <option value="">Please select a language</option>
+      <option *ngFor="let lang of langs" [value]="lang">{{lang}}</option>
+    </select>
+  </div>
+   </fieldset>
+</form>

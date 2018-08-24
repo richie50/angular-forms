@@ -1,7 +1,7 @@
 <div [hidden]="submitted">
   <div class="container">
     <h1>Reactive Forms</h1>
-    <form [formGroup]="reactiveForms" (ngSubmit)="onSubmit()" #reactiveForm="ngForm">
+    <form [formGroup]="reactiveForms"  (ngSubmit)="onSubmit(reactiveForm)" #reactiveForm="ngForm">
       <div class="form-group">
         <label for="name">Name</label>
         <!-- template ref variable #name was added to resolved the  cant bind valid to undefined , -->
@@ -22,11 +22,14 @@
            <option *ngFor="let pow of powers" [value]="pow">{{pow}}</option>
       </select>
       </div>
-
-      <button type="submit" class="btn btn-success" (click)="onSubmit()" [disabled]="!reactiveForm.form.valid">Submit</button>
+      <button type="submit" class="btn btn-success">Submit</button>
     </form>
   </div>
 </div>
+<div>
+  <!-- <button type="submit" class="btn btn-success" (click)="onSubmit($event)">Submit</button> -->
+</div>
+ 
  <div [hidden]="!submitted">
         <button type="button" class="btn btn-default" (click)="revealForm()">New Form</button>
 </div>

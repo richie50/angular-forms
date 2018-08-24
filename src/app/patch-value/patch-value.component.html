@@ -1,0 +1,26 @@
+<div class="container">
+  <form novalidate (ngSubmit)="onSubmit(form)" [formGroup]="form">
+      <div class="form-group">
+        <label>
+          <span>Full name</span>
+          <input type="text" class="input" formControlName="name">
+        </label>
+        <div class="form-group" formGroupName="event">
+          <label>
+            <span>Event title</span>
+            <input type="text" class="input" formControlName="title">
+          </label>
+          <label>
+            <span>Event location</span>
+            <input type="text" class="input" formControlName="location">
+          </label>
+        </div>
+      </div>
+      <div>
+        <button class="btn btn-default" type="submit" [disabled]="form.invalid">
+          Submit
+        </button>
+      </div>
+    </form>
+</div>
+
