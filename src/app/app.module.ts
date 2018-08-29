@@ -23,6 +23,7 @@ import { FormGroupComponent } from './form-group/form-group.component';
 import { ControlMessagesComponent } from './control-messages/control-messages.component';
 import { PatchValueComponent } from './patch-value/patch-value.component';
 import { FormDataMock } from "./services/mock-data.service";
+import { EventContactFormsComponent } from './event-contact-forms/event-contact-forms.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { FormDataMock } from "./services/mock-data.service";
     ModalFormComponent,
     FormGroupComponent,
     ControlMessagesComponent,
-    PatchValueComponent
+    PatchValueComponent,
+    EventContactFormsComponent
   ],
   imports: [
     HttpClientModule,

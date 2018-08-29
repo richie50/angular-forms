@@ -8,6 +8,8 @@ import { ReactiveFormsComponent } from '../reactive-forms/reactive-forms.compone
 import { SearchFormsComponent } from "../search-forms/search-forms.component";
 import { FormGroupComponent } from '../form-group/form-group.component';
 import { PatchValueComponent } from '../patch-value/patch-value.component';
+import { EventContactFormsComponent } from "../event-contact-forms/event-contact-forms.component";
+
 //ONly one instance of the router otherwise you will run into issues later
 const routes: Routes = [
     {
@@ -31,6 +33,10 @@ const routes: Routes = [
         path:'formGroup',
         component: FormGroupComponent
     },
+     {
+        path:'eventforms',
+        component: EventContactFormsComponent
+    },
     {
         path:'patchValue',
         component:PatchValueComponent,
@@ -45,7 +51,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
+exports: [RouterModule],
   providers: []
 })
 

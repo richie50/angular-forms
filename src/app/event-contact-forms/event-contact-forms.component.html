@@ -1,0 +1,32 @@
+<form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="contactForm">
+  <div class="form-row cointainer">
+    <div class="form-group col-md-5">
+      <label for="firstName">First Name</label>
+      <input type="text" class="form-control" formControlName="firstName" id="firstName" placeholder="" required>
+      <span *ngIf="firstName.invalid && (firstName.touched || f.submitted)" class="is-invalid">
+          Please specify your first name
+        </span>
+    </div>
+    <div class="form-group col-md-5">
+      <label for="lastName">Last Name</label>
+      <input type="text" class="form-control" formControlName="lastName" id="lastName" placeholder="" required>
+    </div>
+    <div class="form-group col-md-5">
+      <label for="phoneNum">Phone Number</label>
+      <input type="text" class="form-control" formControlName="phoneNum" id="phoneNum" placeholder="">
+    </div>
+    <div class="form-group col-md-5">
+      <label for="email">Email</label>
+      <input type="email" class="form-control" formControlName="email" id="email" placeholder="">
+    </div>
+    <div class="form-group col-md-5">
+      <label for="email">Date</label>
+      <input type="date" class="form-control" formControlName="date" id="date" placeholder="">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inquiry">Inquiry</label>
+    <textarea type="text" class="form-control" formControlName="email" id="inquiry"  rows="4"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Sign in</button>
+</form>
