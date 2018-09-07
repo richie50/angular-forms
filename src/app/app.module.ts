@@ -24,6 +24,7 @@ import { ControlMessagesComponent } from './control-messages/control-messages.co
 import { PatchValueComponent } from './patch-value/patch-value.component';
 import { FormDataMock } from "./services/mock-data.service";
 import { EventContactFormsComponent } from './event-contact-forms/event-contact-forms.component';
+import { FooterComponentComponent } from './footer-component/footer-component.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { EventContactFormsComponent } from './event-contact-forms/event-contact-
     FormGroupComponent,
     ControlMessagesComponent,
     PatchValueComponent,
-    EventContactFormsComponent
+    EventContactFormsComponent,
+    FooterComponentComponent
   ],
   imports: [
     HttpClientModule,
